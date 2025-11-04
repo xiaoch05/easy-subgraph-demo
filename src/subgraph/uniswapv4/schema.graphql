@@ -1,0 +1,20 @@
+type UniswapV4Slot0 @entity {
+  id: ID!
+  chainId: BigInt!
+  pool: String!
+  sqrtPriceX96: String!
+  liquidity: String!
+  lpFee: String?
+  protocolFee: String?
+  tickLow: Int?
+  tickUp: Int?
+  tick: String!
+  tickSpacing: Int?
+  timestamp: String?
+  reserve0: String?
+  reserve1: String?
+  token0: String?
+  token1: String?
+}
+
+

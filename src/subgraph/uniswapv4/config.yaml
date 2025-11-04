@@ -1,0 +1,84 @@
+name: UniswapV4Pool
+disable: false
+enable_running: true
+contracts:
+  - name: UniswapV4Pool
+    abi_file_path: ./abis/UniswapV4Pool.json
+    handler: ./src/UniswapV4Pool.ts
+    events:
+      - event: Swap
+        receipt: false
+        timestamp: false
+networks:
+  - id: 42161
+    name: arbitrum
+    urls:
+      - url: https://1rpc.io/arb
+    start_block: 337155853
+    scan_range: 200
+    scan_interval: 1000
+    rewrite: true
+    reorg: 2
+    contracts:
+      - name: UniswapV4Pool
+        address: "0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32"
+  - id: 8453
+    name: base
+    urls:
+      - url: https://base.llamarpc.com
+    start_block: 30288832
+    scan_range: 200
+    scan_interval: 1000
+    rewrite: true
+    reorg: 2
+    contracts:
+      - name: UniswapV4Pool
+        address: "0x498581fF718922c3f8e6A244956aF099B2652b2b"
+  - id: 1
+    name: ethereum
+    urls:
+      - url: https://eth.llamarpc.com
+    start_block: 22493039
+    scan_range: 20
+    scan_interval: 5000
+    rewrite: true
+    reorg: 2
+    contracts:
+      - name: UniswapV4Pool
+        address: "0x000000000004444c5dc75cB358380D2e3dE08A90"
+  - id: 137
+    name: polygon
+    urls:
+      - url: https://polygon.drpc.org
+    start_block: 71572028
+    scan_range: 20
+    scan_interval: 1000
+    rewrite: true
+    reorg: 2
+    contracts:
+      - name: UniswapV4Pool
+        address: "0x67366782805870060151383f4bbff9dab53e5cd6"
+  - id: 43114
+    name: avalanche
+    urls:
+      - url: https://avalanche-c-chain-rpc.publicnode.com
+    start_block: 62118318
+    scan_range: 20
+    scan_interval: 1000
+    rewrite: true
+    reorg: 2
+    contracts:
+      - name: UniswapV4Pool
+        address: "0x06380c0e0912312b5150364b9dc4542ba0dbbc85"
+  - id: 56
+    name: bsc
+    urls:
+      - url: https://bsc.drpc.org
+    start_block: 61207476
+    scan_range: 10
+    scan_interval: 1000
+    rewrite: true
+    reorg: 2
+    contracts:
+      - name: UniswapV4Pool
+        address: "0x28e2ea090877bf75740558f6bfb36a5ffee9e9df"
