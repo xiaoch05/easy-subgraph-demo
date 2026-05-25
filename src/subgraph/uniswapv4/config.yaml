@@ -13,7 +13,7 @@ networks:
   - id: 42161
     name: arbitrum
     urls:
-      - url: https://1rpc.io/arb
+      - url: https://arb1.arbitrum.io/rpc
     start_block: 337155853
     scan_range: 200
     scan_interval: 1000

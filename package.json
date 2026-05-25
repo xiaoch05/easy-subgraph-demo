@@ -17,7 +17,10 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "init:db": "npx prisma migrate reset --schema src/subgraph/generated/index.schema.prisma; npx prisma migrate dev --name init --schema src/subgraph/generated/index.schema.prisma",
+    "generate:clear": "rm -rf ./src/subgraph/generated && mkdir -p ./src/subgraph/generated",
+    "generate": "yarn generate:clear && npx easy-subgraph generate:db"
   },
   "dependencies": {
     "@apollo/server": "^5.1.0",
@@ -51,6 +54,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "jest": "^29.5.0",
     "prettier": "^3.0.0",
+    "prisma": "6.16.2",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
     "ts-jest": "^29.1.0",
